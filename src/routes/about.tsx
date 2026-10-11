@@ -1,17 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
-import { Education } from "@/components/about/education";
 import { Experience } from "@/components/about/experience";
 
 import { Skills } from "@/components/about/skills";
-import { Stack } from "@/components/about/stack";
-import { ContactCard } from "@/components/contact/contact-card";
 import { FadeIn } from "@/components/ui/motion-primitives";
 
-const TITLE = "About Shnwaz — Product Designer & Frontend Engineer";
+const TITLE = "About — FX TEAM";
 const DESCRIPTION =
-  "Background, experience, education, and stack behind Shnwaz — plus how to get in touch.";
+  "About FX TEAM, its experience, and capabilities.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -35,45 +32,28 @@ function AboutPage(): ReactNode {
         <FadeIn delay={0.5}>
           <div className="rounded-4xl border border-foreground/5 bg-foreground/1.5 p-8 sm:p-12 dark:bg-foreground/3">
             <h1 className="font-serif text-[1.75rem] font-medium tracking-tight text-foreground sm:text-[2rem]">
-              Hello! I&rsquo;m{" "}
-              <span className="border-b border-foreground/30 pb-0.5">Shnwaz</span>.
+              About <span className="border-b border-foreground/30 pb-0.5">FX TEAM</span>
             </h1>
             <div className="mt-8 space-y-6 text-[17px] leading-[1.7] tracking-tight text-foreground/75 sm:text-[18px]">
               <p>
                 A{" "}
                 <strong className="font-semibold text-foreground">
-                  product designer and frontend engineer
+                  close-knit independent team
                 </strong>{" "}
-                passionate about building intuitive, human-centered digital
-                experiences. With a background in{" "}
+                bringing together creative and technical people. We value{" "}
                 <strong className="font-semibold text-foreground">visual craft</strong>{" "}
                 and{" "}
                 <strong className="font-semibold text-foreground">
-                  interaction design
-                </strong>
-                , I bring a unique blend of design thinking and technical execution
-                to every project.
-              </p>
-              <p>
-                My journey into design began when I realized how often good user
-                experience was missing from powerful tools. That led me to embrace{" "}
-                <strong className="font-semibold text-foreground">
-                  user-centered design
-                </strong>{" "}
-                as both a mindset and a craft, one that balances clarity,
-                creativity, and functionality.
-              </p>
-              <p>
-                Currently leading design at small product teams shipping software
-                for{" "}
-                <strong className="font-semibold text-foreground">
-                  creative professionals
-                </strong>
-                , I&rsquo;m always looking for opportunities to{" "}
-                <strong className="font-semibold text-foreground">
-                  shape thoughtful interfaces and build scalable design systems
+                  thoughtful execution
                 </strong>
                 .
+              </p>
+              <p>
+                Our members contribute different strengths while working with a{" "}
+                <strong className="font-semibold text-foreground">
+                  shared team identity
+                </strong>{" "}
+                and a direct, focused approach.
               </p>
             </div>
           </div>
@@ -84,14 +64,11 @@ function AboutPage(): ReactNode {
         <FadeIn delay={0.1}>
           <div className="flex flex-col gap-10">
             <Experience />
-            <Education />
             <Skills />
-            <Stack />
           </div>
         </FadeIn>
       </section>
 
-      <ContactCard />
       <div className="h-12 sm:h-16" />
     </main>
   );
