@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 
-import { HeroCtas } from "./hero-ctas";
 import { FadeIn, ScaleUnblur } from "@/components/ui/motion-primitives";
 
 const PORTRAIT_SRC = "/shnwaz.jpg";
@@ -12,27 +11,13 @@ export function Hero(): ReactNode {
       <div className="mx-auto w-full max-w-275 px-6 pt-44 pb-24 sm:px-10 sm:pt-56 sm:pb-32">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-8">
           <FadeIn className="flex flex-col gap-4">
-            <p className="text-[20px] leading-tight tracking-tight font-medium text-foreground">
-              Hey
-              <span aria-hidden="true" className="mx-0.5">
-                👋
-              </span>
-              , I&rsquo;m Shnwaz
-            </p>
-
             <h1 className="text-[2.75rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.5rem] lg:text-[3.65rem]">
-              <span className="block whitespace-nowrap">
-                Design engineer &
-              </span>
-              <span className="block whitespace-nowrap">AI enthusiast</span>
+              FX TEAM
             </h1>
 
             <p className="max-w-[34ch] text-[22px] leading-[1.4] tracking-tight text-foreground/65">
-              Independent engineer focused on interfaces that feel calm,
-              considered, and quietly fast.
+              The people behind FX.
             </p>
-
-            <HeroCtas />
           </FadeIn>
 
           <ScaleUnblur className="flex justify-stretch md:justify-end">
@@ -40,7 +25,7 @@ export function Hero(): ReactNode {
               <div className="relative h-full w-full overflow-hidden rounded-[1.6rem]">
                 <img
                   src={PORTRAIT_SRC}
-                  alt="Shnwaz portrait"
+                  alt="FX TEAM"
                   className="h-full w-full select-none object-cover"
                   draggable={false}
                 />

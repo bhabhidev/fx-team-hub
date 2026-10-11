@@ -1,13 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
-import { ContactCard } from "@/components/contact/contact-card";
 import { Hero } from "@/components/hero/hero";
-import { Projects } from "@/components/projects/projects";
 
-const TITLE = "Shnwaz — Design Engineer & AI Enthusiast";
-const DESCRIPTION =
-  "Independent engineer focused on interfaces that feel calm, considered, and quietly fast. Selected work, background, and contact.";
+const TITLE = "FX TEAM — Home";
+const DESCRIPTION = "Meet FX TEAM and explore the people behind the team.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,11 +22,8 @@ export const Route = createFileRoute("/")({
 
 function HomePage(): ReactNode {
   return (
-    <main id="main-content" className="flex flex-1 flex-col gap-20 sm:gap-28">
+    <main id="main-content" className="flex flex-1 flex-col">
       <Hero />
-      <Projects withHeadline viewMoreVisible />
-      <ContactCard />
-      <div className="h-12 sm:h-16" />
     </main>
   );
 }

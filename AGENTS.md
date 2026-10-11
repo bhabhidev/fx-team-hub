@@ -11,3 +11,4 @@
 
 - Keep shareable content as separate TanStack routes so navigation, metadata, and direct links remain reliable.
 - Keep FX member definitions centralized in the member grid so names, links, and hover audio stay synchronized.
+- Preserve the imported portfolio's visual language while FX TEAM content replaces the portfolio sections, so future changes remain stylistically consistent.

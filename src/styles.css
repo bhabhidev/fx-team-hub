@@ -204,6 +204,78 @@ html[data-theme-anim="1"]::view-transition-new(root) {
     0 4px 8px -4px rgb(0 0 0 / 0.4);
 }
 
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.member-card {
+  display: flex;
+  min-height: 7.5rem;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--foreground) 7%, transparent);
+  border-radius: 1.5rem;
+  background: color-mix(in srgb, var(--foreground) 2%, var(--background));
+  padding: 1rem;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1), border-color 300ms ease, background-color 300ms ease;
+}
+
+a.member-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+  background: color-mix(in srgb, var(--foreground) 4%, var(--background));
+}
+
+.member-avatar {
+  display: inline-flex;
+  height: 3.5rem;
+  width: 3.5rem;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--foreground) 9%, transparent);
+  border-radius: 1rem;
+  background: var(--background);
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.member-name,
+.member-role {
+  display: block;
+}
+
+.member-name {
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.member-role {
+  margin-top: 0.35rem;
+  color: color-mix(in srgb, var(--foreground) 58%, transparent);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .member-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .member-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .project-card__image {
   overflow: hidden;
 }
