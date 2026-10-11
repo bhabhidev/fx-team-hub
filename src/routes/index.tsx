@@ -1,35 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import type { ReactNode } from "react";
+
+import { ContactCard } from "@/components/contact/contact-card";
+import { Hero } from "@/components/hero/hero";
+import { Projects } from "@/components/projects/projects";
+
+const TITLE = "Shnwaz — Design Engineer & AI Enthusiast";
+const DESCRIPTION =
+  "Independent engineer focused on interfaces that feel calm, considered, and quietly fast. Selected work, background, and contact.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "FX TEAM — Home" },
-      { name: "description", content: "Meet FX TEAM, a focused collective of creators and developers." },
-      { property: "og:title", content: "FX TEAM — Home" },
-      { property: "og:description", content: "Meet FX TEAM, a focused collective of creators and developers." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
     ],
   }),
-  component: Index,
+  component: HomePage,
 });
 
-function Index() {
+function HomePage(): ReactNode {
   return (
-    <main id="main-content" className="home-page">
-      <section className="home-intro">
-        <p className="eyebrow">EST. 2026 — DIGITAL COLLECTIVE</p>
-        <h1>FX TEAM</h1>
-        <p className="home-statement">One team. Distinct minds. Built to leave a mark.</p>
-        <a className="text-link" href="/fx">
-          Meet the team <ArrowUpRight aria-hidden="true" />
-        </a>
-      </section>
-      <div className="home-index" aria-hidden="true">
-        <span>FX</span>
-        <span>09 MEMBERS</span>
-      </div>
+    <main id="main-content" className="flex flex-1 flex-col gap-20 sm:gap-28">
+      <Hero />
+      <Projects withHeadline viewMoreVisible />
+      <ContactCard />
+      <div className="h-12 sm:h-16" />
     </main>
   );
 }

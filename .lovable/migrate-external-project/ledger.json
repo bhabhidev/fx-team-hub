@@ -4,15 +4,15 @@
       "capability": "application code and routes",
       "source": "uploaded code archive",
       "outcome": "migrate exact portfolio UI",
-      "status": "in_progress",
-      "next_action": "copy inspected source and verify routes"
+      "status": "migrated",
+      "next_action": "verify rendering and interactions"
     },
     {
       "capability": "bundled visual assets",
       "source": "uploaded code archive",
       "outcome": "migrate",
-      "status": "in_progress",
-      "next_action": "restore referenced assets and verify rendering"
+      "status": "migrated",
+      "next_action": "verify rendering and interactions"
     },
     {
       "capability": "database and records",
