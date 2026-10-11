@@ -1,12 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { ReactNode } from "react";
+
+import { Education } from "@/components/about/education";
+import { Experience } from "@/components/about/experience";
+
+import { Skills } from "@/components/about/skills";
+import { Stack } from "@/components/about/stack";
+import { ContactCard } from "@/components/contact/contact-card";
+import { FadeIn } from "@/components/ui/motion-primitives";
+
+const TITLE = "About Shnwaz — Product Designer & Frontend Engineer";
+const DESCRIPTION =
+  "Background, experience, education, and stack behind Shnwaz — plus how to get in touch.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — FX TEAM" },
-      { name: "description", content: "About FX TEAM and the collective behind the name." },
-      { property: "og:title", content: "About — FX TEAM" },
-      { property: "og:description", content: "About FX TEAM and the collective behind the name." },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -14,19 +27,72 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-function AboutPage() {
+function AboutPage(): ReactNode {
   return (
-    <main id="main-content" className="content-page about-page">
-      <p className="eyebrow">ABOUT THE COLLECTIVE</p>
-      <h1>FX TEAM</h1>
-      <p className="about-copy">
-        A close group of creators and developers, each with a different voice and one shared identity.
-      </p>
-      <dl className="about-facts">
-        <div><dt>Founded</dt><dd>2026</dd></div>
-        <div><dt>Members</dt><dd>09</dd></div>
-        <div><dt>Base</dt><dd>Online</dd></div>
-      </dl>
+    <main id="main-content" className="flex flex-1 flex-col">
+      <section className="mx-auto w-full max-w-160 px-6 pt-40 pb-16 sm:px-10 sm:pt-56 sm:pb-24">
+
+        <FadeIn delay={0.5}>
+          <div className="rounded-4xl border border-foreground/5 bg-foreground/1.5 p-8 sm:p-12 dark:bg-foreground/3">
+            <h1 className="font-serif text-[1.75rem] font-medium tracking-tight text-foreground sm:text-[2rem]">
+              Hello! I&rsquo;m{" "}
+              <span className="border-b border-foreground/30 pb-0.5">Shnwaz</span>.
+            </h1>
+            <div className="mt-8 space-y-6 text-[17px] leading-[1.7] tracking-tight text-foreground/75 sm:text-[18px]">
+              <p>
+                A{" "}
+                <strong className="font-semibold text-foreground">
+                  product designer and frontend engineer
+                </strong>{" "}
+                passionate about building intuitive, human-centered digital
+                experiences. With a background in{" "}
+                <strong className="font-semibold text-foreground">visual craft</strong>{" "}
+                and{" "}
+                <strong className="font-semibold text-foreground">
+                  interaction design
+                </strong>
+                , I bring a unique blend of design thinking and technical execution
+                to every project.
+              </p>
+              <p>
+                My journey into design began when I realized how often good user
+                experience was missing from powerful tools. That led me to embrace{" "}
+                <strong className="font-semibold text-foreground">
+                  user-centered design
+                </strong>{" "}
+                as both a mindset and a craft, one that balances clarity,
+                creativity, and functionality.
+              </p>
+              <p>
+                Currently leading design at small product teams shipping software
+                for{" "}
+                <strong className="font-semibold text-foreground">
+                  creative professionals
+                </strong>
+                , I&rsquo;m always looking for opportunities to{" "}
+                <strong className="font-semibold text-foreground">
+                  shape thoughtful interfaces and build scalable design systems
+                </strong>
+                .
+              </p>
+            </div>
+          </div>
+        </FadeIn>
+      </section>
+
+      <section className="mx-auto w-full max-w-[40rem] px-6 pb-20 sm:px-10 sm:pb-28">
+        <FadeIn delay={0.1}>
+          <div className="flex flex-col gap-10">
+            <Experience />
+            <Education />
+            <Skills />
+            <Stack />
+          </div>
+        </FadeIn>
+      </section>
+
+      <ContactCard />
+      <div className="h-12 sm:h-16" />
     </main>
   );
 }

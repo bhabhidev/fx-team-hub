@@ -1,0 +1,46 @@
+{
+  "capabilities": [
+    {
+      "capability": "application code and routes",
+      "source": "uploaded code archive",
+      "outcome": "migrate exact portfolio UI",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "bundled visual assets",
+      "source": "uploaded code archive",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "database and records",
+      "source": "none detected",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "authentication and authorization",
+      "source": "none detected",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "external providers, secrets, callbacks, webhooks, schedules",
+      "source": "none detected",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "cutover and verification",
+      "source": "uploaded code archive",
+      "outcome": "verify local preview",
+      "status": "verified",
+      "next_action": "none"
+    }
+  ]
+}
