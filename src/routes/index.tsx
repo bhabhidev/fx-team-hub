@@ -1,24 +1,35 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "FX TEAM — Home" },
+      { name: "description", content: "Meet FX TEAM, a focused collective of creators and developers." },
+      { property: "og:title", content: "FX TEAM — Home" },
+      { property: "og:description", content: "Meet FX TEAM, a focused collective of creators and developers." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main id="main-content" className="home-page">
+      <section className="home-intro">
+        <p className="eyebrow">EST. 2026 — DIGITAL COLLECTIVE</p>
+        <h1>FX TEAM</h1>
+        <p className="home-statement">One team. Distinct minds. Built to leave a mark.</p>
+        <a className="text-link" href="/fx">
+          Meet the team <ArrowUpRight aria-hidden="true" />
+        </a>
+      </section>
+      <div className="home-index" aria-hidden="true">
+        <span>FX</span>
+        <span>09 MEMBERS</span>
+      </div>
+    </main>
   );
 }

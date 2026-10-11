@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep shareable content as separate TanStack routes so navigation, metadata, and direct links remain reliable.
+- Keep FX member definitions centralized in the member grid so names, links, and hover audio stay synchronized.
