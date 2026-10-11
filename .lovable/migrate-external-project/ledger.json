@@ -4,15 +4,15 @@
       "capability": "application code and routes",
       "source": "uploaded code archive",
       "outcome": "migrate exact portfolio UI",
-      "status": "migrated",
-      "next_action": "verify rendering and interactions"
+      "status": "verified",
+      "next_action": "none"
     },
     {
       "capability": "bundled visual assets",
       "source": "uploaded code archive",
       "outcome": "migrate",
-      "status": "migrated",
-      "next_action": "verify rendering and interactions"
+      "status": "verified",
+      "next_action": "none"
     },
     {
       "capability": "database and records",
@@ -39,8 +39,8 @@
       "capability": "cutover and verification",
       "source": "uploaded code archive",
       "outcome": "verify local preview",
-      "status": "pending",
-      "next_action": "check all routes and interactions"
+      "status": "verified",
+      "next_action": "none"
     }
   ]
 }
