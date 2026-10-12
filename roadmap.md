@@ -1,3 +1,3 @@
-- [ ] Simplify About to the supplied text with a mobile-friendly video background and no unnecessary scrolling.
-- [ ] Replace homepage and member photos, remove the ninth placeholder and Detroit ID label, remove card arrows, and make member names readable.
-- [ ] Check photos, links, video playback, and mobile layout.
+- [x] Simplify About to the supplied text with a mobile-friendly video background and no unnecessary scrolling.
+- [x] Replace homepage and member photos, remove the ninth placeholder and Detroit ID label, remove card arrows, and make member names readable.
+- [x] Check photos, links, video playback, and mobile layout.
