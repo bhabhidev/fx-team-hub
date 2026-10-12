@@ -1,8 +1,11 @@
 import type { ReactNode } from "react";
+import { useRouterState } from "@tanstack/react-router";
 
 import { ShaderFlow } from "../shaders/shader-flow";
 
 export function PageBackdrop(): ReactNode {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  if (pathname === "/about") return null;
   return (
     <div
       aria-hidden="true"

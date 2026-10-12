@@ -5,9 +5,9 @@ import { ContactCard } from "@/components/contact/contact-card";
 import { Projects } from "@/components/projects/projects";
 import { FadeIn } from "@/components/ui/motion-primitives";
 
-const TITLE = "Projects — Shnwaz";
+const TITLE = "Project Archive — FX TEAM";
 const DESCRIPTION =
-  "Experiments, collaborations, and projects Shnwaz is especially proud to have shipped.";
+  "The original project archive preserved by FX TEAM.";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
