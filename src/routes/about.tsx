@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
 import aboutVideo from "@/assets/fx-about.mp4.asset.json";
+import aboutWebm from "@/assets/fx-about.webm.asset.json";
 
 const TITLE = "About — FX TEAM";
 const DESCRIPTION =
@@ -24,7 +25,10 @@ export const Route = createFileRoute("/about")({
 function AboutPage(): ReactNode {
   return (
     <main id="main-content" className="about-scene">
-      <video className="about-video" src={aboutVideo.url} autoPlay muted loop playsInline preload="auto" aria-hidden="true" />
+      <video className="about-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true">
+        <source src={aboutWebm.url} type="video/webm" />
+        <source src={aboutVideo.url} type="video/mp4" />
+      </video>
       <div className="about-shade" aria-hidden="true" />
       <section className="about-copy">
         <h1 className="font-serif text-[1.75rem] font-medium leading-relaxed sm:text-[2rem]">
