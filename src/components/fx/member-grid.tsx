@@ -1,6 +1,11 @@
 import { useRef, type ReactNode } from "react";
 import shnwazPhoto from "@/assets/fx-shnwaz.jpg.asset.json";
 import detroitPhoto from "@/assets/fx-detroit.jpg.asset.json";
+import junedPhoto from "@/assets/fx-FXTEAMLINK.jpg.asset.json";
+import kobraPhoto from "@/assets/fx-pilbx.jpg.asset.json";
+import princePhoto from "@/assets/fx-Semexx.jpg.asset.json";
+import anshPhoto from "@/assets/fx-AnshX69.jpg.asset.json";
+import jatinPhoto from "@/assets/fx-J4tnxsrc.jpg.asset.json";
 
 import { FadeIn } from "@/components/ui/motion-primitives";
 
@@ -17,12 +22,14 @@ export const FX_MEMBERS: readonly Member[] = [
   {
     name: "ㅤ- 𝐉𝐔𝚴𝐄𝐃ㅤ",
     displayName: "JUNED",
+    photo: junedPhoto.url,
     role: "owner of FX TEAM",
     href: "https://t.me/FXTEAMLINK",
   },
   {
     name: "𝚱 𝚹 𝚩 𝐑 𝚲",
     displayName: "KOBRA",
+    photo: kobraPhoto.url,
     role: "kid banner papa",
     href: "https://t.me/pilbx",
   },
@@ -30,6 +37,7 @@ export const FX_MEMBERS: readonly Member[] = [
   {
     name: "⏤͟͟༒⃝ᏢᎡϟꋊᏣᎬ༒࿗⏤͟͞➤⃟💝",
     displayName: "PRINCE",
+    photo: princePhoto.url,
     role: "puncherwala",
     href: "https://t.me/Semexx",
     audio: "https://files.catbox.moe/kpwqey.ogg",
@@ -38,12 +46,14 @@ export const FX_MEMBERS: readonly Member[] = [
   {
     name: "𝗩𝗜𝗣 ⚡️ 𝘼𝙉𝙎𝙃𓆩⃟🦅 (ᴏғғʟɪɴᴇ)!!",
     displayName: "VIP ⚡ ANSH (OFFLINE)!!",
+    photo: anshPhoto.url,
     role: "FX member",
     href: "https://t.me/AnshX69",
   },
   {
     name: "『 Jᴀtɪɴ ⚕ 』🕷️",
     displayName: "Jatin",
+    photo: jatinPhoto.url,
     role: "RENDHIIII",
     href: "https://t.me/J4tnxsrc",
   },
