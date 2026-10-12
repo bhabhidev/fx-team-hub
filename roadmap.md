@@ -1,3 +1,4 @@
 - [x] Simplify About to the supplied text with a mobile-friendly video background and no unnecessary scrolling.
 - [x] Replace homepage and member photos, remove the ninth placeholder and Detroit ID label, remove card arrows, and make member names readable.
 - [x] Check photos, links, video playback, and mobile layout.
+- [ ] Update Juned's video, Loki's photo, Shnwaz's link, and original Prince/Loki names; verify cards.
