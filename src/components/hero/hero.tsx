@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
 
 import { FadeIn, ScaleUnblur } from "@/components/ui/motion-primitives";
+import homePhoto from "@/assets/fx-home.jpg.asset.json";
 
-const PORTRAIT_SRC = "/shnwaz.jpg";
+const PORTRAIT_SRC = homePhoto.url;
 
 
 export function Hero(): ReactNode {

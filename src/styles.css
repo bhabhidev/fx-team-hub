@@ -15,6 +15,8 @@
   --font-sans: "Geist", system-ui, -apple-system, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, monospace;
   --font-serif: "Fraunces", ui-serif, Georgia, serif;
+  --video-foreground: #ffffff;
+  --video-shade: rgb(0 0 0 / 0.58);
 }
 
 .dark {
@@ -232,6 +234,7 @@ a.member-card:hover {
 }
 
 .member-avatar {
+  overflow: hidden;
   display: inline-flex;
   height: 3.5rem;
   width: 3.5rem;
@@ -263,6 +266,30 @@ a.member-card:hover {
   font-size: 0.875rem;
   line-height: 1.4;
 }
+
+.about-scene {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding: 7rem 1.5rem 3rem;
+  color: var(--video-foreground);
+}
+
+.about-video,
+.about-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.about-video { object-fit: cover; }
+.about-shade { background: var(--video-shade); }
+.about-copy { width: 100%; max-width: 42rem; text-align: center; overflow-wrap: anywhere; }
 
 @media (max-width: 900px) {
   .member-grid {

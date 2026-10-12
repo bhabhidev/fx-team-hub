@@ -1,14 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
-import { Experience } from "@/components/about/experience";
-
-import { Skills } from "@/components/about/skills";
-import { FadeIn } from "@/components/ui/motion-primitives";
+import aboutVideo from "@/assets/fx-about.mp4.asset.json";
 
 const TITLE = "About — FX TEAM";
 const DESCRIPTION =
-  "About FX TEAM, its experience, and capabilities.";
+  "Words from FX TEAM.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -26,50 +23,17 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage(): ReactNode {
   return (
-    <main id="main-content" className="flex flex-1 flex-col">
-      <section className="mx-auto w-full max-w-160 px-6 pt-40 pb-16 sm:px-10 sm:pt-56 sm:pb-24">
-
-        <FadeIn delay={0.5}>
-          <div className="rounded-4xl border border-foreground/5 bg-foreground/1.5 p-8 sm:p-12 dark:bg-foreground/3">
-            <h1 className="font-serif text-[1.75rem] font-medium tracking-tight text-foreground sm:text-[2rem]">
-              About <span className="border-b border-foreground/30 pb-0.5">FX TEAM</span>
-            </h1>
-            <div className="mt-8 space-y-6 text-[17px] leading-[1.7] tracking-tight text-foreground/75 sm:text-[18px]">
-              <p>
-                A{" "}
-                <strong className="font-semibold text-foreground">
-                  close-knit independent team
-                </strong>{" "}
-                bringing together creative and technical people. We value{" "}
-                <strong className="font-semibold text-foreground">visual craft</strong>{" "}
-                and{" "}
-                <strong className="font-semibold text-foreground">
-                  thoughtful execution
-                </strong>
-                .
-              </p>
-              <p>
-                Our members contribute different strengths while working with a{" "}
-                <strong className="font-semibold text-foreground">
-                  shared team identity
-                </strong>{" "}
-                and a direct, focused approach.
-              </p>
-            </div>
-          </div>
-        </FadeIn>
+    <main id="main-content" className="about-scene">
+      <video className="about-video" src={aboutVideo.url} autoPlay muted loop playsInline preload="auto" aria-hidden="true" />
+      <div className="about-shade" aria-hidden="true" />
+      <section className="about-copy">
+        <h1 className="font-serif text-[1.75rem] font-medium leading-relaxed sm:text-[2rem]">
+          Itna kar tu mehnat aage badh nhi to hoga baad me khed...
+        </h1>
+        <p className="mt-6 text-[18px] leading-relaxed sm:text-[22px]">
+          Wo mil jaegi to kya de degi tujhe .. mal mutra ka ched..
+        </p>
       </section>
-
-      <section className="mx-auto w-full max-w-[40rem] px-6 pb-20 sm:px-10 sm:pb-28">
-        <FadeIn delay={0.1}>
-          <div className="flex flex-col gap-10">
-            <Experience />
-            <Skills />
-          </div>
-        </FadeIn>
-      </section>
-
-      <div className="h-12 sm:h-16" />
     </main>
   );
 }
