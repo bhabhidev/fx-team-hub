@@ -1,0 +1,8 @@
+@font-face { font-family: "FX NotoSansBamum"; src: url("/__l5e/assets-v1/f957b031-75bc-4759-a207-21dc7a1fae7c/NotoSansBamum.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "FX NotoSansCherokee"; src: url("/__l5e/assets-v1/227fdccb-449a-41af-bd60-e11da74e259c/NotoSansCherokee.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "FX NotoSerifTibetan"; src: url("/__l5e/assets-v1/78334281-0289-4e90-b24e-09af38232bd5/NotoSerifTibetan.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "FX NotoSansYi"; src: url("/__l5e/assets-v1/a7208343-307e-4bd3-a4ce-5b0bf5bb417f/NotoSansYi.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "FX NotoSansMath"; src: url("/__l5e/assets-v1/0f143186-c08b-465e-9b3c-145baa49afec/NotoSansMath.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "FX NotoSansSymbols2"; src: url("/__l5e/assets-v1/47284b9a-6dcb-4cfb-8c7c-19a3486371e1/NotoSansSymbols2.ttf") format("truetype"); font-display: swap; }
+
+.member-name-original { font-family: "FX NotoSansMath", "FX NotoSansCherokee", "FX NotoSansYi", "FX NotoSansBamum", "FX NotoSerifTibetan", "FX NotoSansSymbols2", "Apple Color Emoji", "Segoe UI Emoji", sans-serif; }
