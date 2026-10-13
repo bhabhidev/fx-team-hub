@@ -17,7 +17,6 @@ type Member = {
   role: string;
   photo?: string;
   video?: string;
-  originalName?: boolean;
   href?: string;
   audio?: string;
 };
@@ -37,11 +36,10 @@ export const FX_MEMBERS: readonly Member[] = [
     role: "kid banner papa",
     href: "https://t.me/pilbx",
   },
-  { name: "ㅤ- 𝐒𝚮𝚴𝐖𝚨𝚭‎ㅤ", displayName: "SHNWAZ", role: "developer", photo: shnwazPhoto.url, href: "https://t.me/SHNWAZX" },
+  { name: "ㅤ- 𝐒𝚮𝚴𝐖𝚨𝚭‎ㅤ", displayName: "SHNWAZ", role: "developer", photo: shnwazPhoto.url },
   {
     name: "⏤͟͟༒⃝ᏢᎡϟꋊᏣᎬ༒࿗⏤͟͞➤⃟💝",
     displayName: "PRINCE",
-    originalName: true,
     photo: princePhoto.url,
     role: "puncherwala",
     href: "https://t.me/Semexx",
@@ -65,7 +63,6 @@ export const FX_MEMBERS: readonly Member[] = [
   {
     name: "𖣘˹𝔽𝕩𓆩˹𝗟𝗼𝗸𝗶˼𝆺𝅥࿐🥶⃤⛦⃕‌",
     displayName: "FX Loki",
-    originalName: true,
     photo: lokiPhoto.url,
     role: "मादरचोद समलैंगिक",
     href: "https://t.me/zyrovin",
@@ -99,7 +96,7 @@ function MemberCard({ member }: { member: Member }): ReactNode {
         {member.video ? <video src={member.video} className="h-full w-full object-cover" autoPlay muted loop playsInline preload="auto" /> : member.photo ? <img src={member.photo} alt="" className="h-full w-full object-cover" loading="lazy" /> : initials(member.displayName)}
       </span>
       <span className="min-w-0 flex-1">
-        <span className={member.originalName ? "member-name member-name-original" : "member-name"}>{member.originalName ? member.name : member.displayName}</span>
+        <span className="member-name member-name-original">{member.name}</span>
         {member.role ? <span className="member-role">{member.role}</span> : null}
       </span>
       {member.audio ? <audio ref={audioRef} src={member.audio} preload="none" /> : null}

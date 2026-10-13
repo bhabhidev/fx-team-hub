@@ -290,6 +290,28 @@ a.member-card:hover {
 .about-video { object-fit: cover; }
 .about-shade { background: var(--video-shade); }
 .about-copy { width: 100%; max-width: 42rem; text-align: center; overflow-wrap: anywhere; }
+.about-audio-toggle {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  color: var(--video-foreground);
+  background: transparent;
+}
+.about-audio-toggle:hover { background: transparent; }
+.about-audio-icon {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--video-shade);
+}
 
 @media (max-width: 900px) {
   .member-grid {
