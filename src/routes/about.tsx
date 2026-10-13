@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useRef, useState, type ReactNode } from "react";
-import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import aboutVideo from "@/assets/fx-about.mp4.asset.json";
@@ -42,9 +41,7 @@ function AboutPage(): ReactNode {
         <source src={aboutVideo.url} type="video/mp4" />
       </video>
       <div className="about-shade" aria-hidden="true" />
-      <Button variant="ghost" className="about-audio-toggle" onClick={toggleAudio} aria-label={muted ? "Turn video sound on" : "Mute video sound"} aria-pressed={!muted} title={muted ? "Turn video sound on" : "Mute video sound"}>
-        <span className="about-audio-icon">{muted ? <VolumeX /> : <Volume2 />}</span>
-      </Button>
+      <Button variant="ghost" className="about-audio-toggle" onClick={toggleAudio} aria-label={muted ? "Turn video sound on" : "Mute video sound"} aria-pressed={!muted} />
       <section className="about-copy">
         <h1 className="font-serif text-[1.75rem] font-medium leading-relaxed sm:text-[2rem]">
           Itna kar tu mehnat aage badh nhi to hoga baad me khed...
