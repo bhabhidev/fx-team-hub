@@ -2,6 +2,7 @@ import { useRef, type ReactNode } from "react";
 import shnwazPhoto from "@/assets/fx-shnwaz.jpg.asset.json";
 import detroitPhoto from "@/assets/fx-detroit.jpg.asset.json";
 import junedVideo from "@/assets/fx-juned.mp4.asset.json";
+import junedWebm from "@/assets/fx-juned.webm.asset.json";
 import lokiPhoto from "@/assets/fx-loki.jpg.asset.json";
 import kobraPhoto from "@/assets/fx-pilbx.jpg.asset.json";
 import princePhoto from "@/assets/fx-Semexx.jpg.asset.json";
@@ -17,7 +18,6 @@ type Member = {
   role: string;
   photo?: string;
   video?: string;
-  originalName?: boolean;
   href?: string;
   audio?: string;
 };
@@ -37,11 +37,10 @@ export const FX_MEMBERS: readonly Member[] = [
     role: "kid banner papa",
     href: "https://t.me/pilbx",
   },
-  { name: "ㅤ- 𝐒𝚮𝚴𝐖𝚨𝚭‎ㅤ", displayName: "SHNWAZ", role: "developer", photo: shnwazPhoto.url, href: "https://t.me/SHNWAZX" },
+  { name: "ㅤ- 𝐒𝚮𝚴𝐖𝚨𝚭‎ㅤ", displayName: "SHNWAZ", role: "developer", photo: shnwazPhoto.url },
   {
     name: "⏤͟͟༒⃝ᏢᎡϟꋊᏣᎬ༒࿗⏤͟͞➤⃟💝",
     displayName: "PRINCE",
-    originalName: true,
     photo: princePhoto.url,
     role: "puncherwala",
     href: "https://t.me/Semexx",
@@ -65,7 +64,6 @@ export const FX_MEMBERS: readonly Member[] = [
   {
     name: "𖣘˹𝔽𝕩𓆩˹𝗟𝗼𝗸𝗶˼𝆺𝅥࿐🥶⃤⛦⃕‌",
     displayName: "FX Loki",
-    originalName: true,
     photo: lokiPhoto.url,
     role: "मादरचोद समलैंगिक",
     href: "https://t.me/zyrovin",
@@ -96,10 +94,10 @@ function MemberCard({ member }: { member: Member }): ReactNode {
   const content = (
     <>
       <span className="member-avatar" aria-hidden="true">
-        {member.video ? <video src={member.video} className="h-full w-full object-cover" autoPlay muted loop playsInline preload="auto" /> : member.photo ? <img src={member.photo} alt="" className="h-full w-full object-cover" loading="lazy" /> : initials(member.displayName)}
+        {member.video ? <video className="h-full w-full object-cover" autoPlay muted loop playsInline preload="auto"><source src={junedWebm.url} type="video/webm" /><source src={member.video} type="video/mp4" /></video> : member.photo ? <img src={member.photo} alt="" className="h-full w-full object-cover" loading="lazy" /> : initials(member.displayName)}
       </span>
       <span className="min-w-0 flex-1">
-        <span className={member.originalName ? "member-name member-name-original" : "member-name"}>{member.originalName ? member.name : member.displayName}</span>
+        <span className="member-name member-name-original">{member.name}</span>
         {member.role ? <span className="member-role">{member.role}</span> : null}
       </span>
       {member.audio ? <audio ref={audioRef} src={member.audio} preload="none" /> : null}
