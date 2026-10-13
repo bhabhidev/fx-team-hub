@@ -4,6 +4,7 @@ import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import aboutVideo from "@/assets/fx-about.mp4.asset.json";
+import aboutWebm from "@/assets/fx-about-audio.webm.asset.json";
 
 const TITLE = "About — FX TEAM";
 const DESCRIPTION =
@@ -37,6 +38,7 @@ function AboutPage(): ReactNode {
   return (
     <main id="main-content" className="about-scene">
       <video ref={videoRef} className="about-video" autoPlay muted={muted} loop playsInline preload="auto" aria-hidden="true">
+        <source src={aboutWebm.url} type="video/webm" />
         <source src={aboutVideo.url} type="video/mp4" />
       </video>
       <div className="about-shade" aria-hidden="true" />

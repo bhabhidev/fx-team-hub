@@ -2,6 +2,7 @@ import { useRef, type ReactNode } from "react";
 import shnwazPhoto from "@/assets/fx-shnwaz.jpg.asset.json";
 import detroitPhoto from "@/assets/fx-detroit.jpg.asset.json";
 import junedVideo from "@/assets/fx-juned.mp4.asset.json";
+import junedWebm from "@/assets/fx-juned.webm.asset.json";
 import lokiPhoto from "@/assets/fx-loki.jpg.asset.json";
 import kobraPhoto from "@/assets/fx-pilbx.jpg.asset.json";
 import princePhoto from "@/assets/fx-Semexx.jpg.asset.json";
@@ -93,7 +94,7 @@ function MemberCard({ member }: { member: Member }): ReactNode {
   const content = (
     <>
       <span className="member-avatar" aria-hidden="true">
-        {member.video ? <video src={member.video} className="h-full w-full object-cover" autoPlay muted loop playsInline preload="auto" /> : member.photo ? <img src={member.photo} alt="" className="h-full w-full object-cover" loading="lazy" /> : initials(member.displayName)}
+        {member.video ? <video className="h-full w-full object-cover" autoPlay muted loop playsInline preload="auto"><source src={junedWebm.url} type="video/webm" /><source src={member.video} type="video/mp4" /></video> : member.photo ? <img src={member.photo} alt="" className="h-full w-full object-cover" loading="lazy" /> : initials(member.displayName)}
       </span>
       <span className="min-w-0 flex-1">
         <span className="member-name member-name-original">{member.name}</span>
