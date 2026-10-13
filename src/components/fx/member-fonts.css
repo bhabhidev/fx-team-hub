@@ -10,4 +10,5 @@
 @font-face { font-family: "FX NotoSymbols"; src: url("/__l5e/assets-v1/ddab794a-978c-450b-8496-d23e5206cbab/NotoSansSymbols.ttf") format("truetype"); font-display: swap; }
 @font-face { font-family: "FX NotoSans"; src: url("/__l5e/assets-v1/c63886ff-4820-4b31-beb6-01695f13af8a/NotoSans.ttf") format("truetype"); font-display: swap; }
 
-.member-name-original { font-family: "FX NotoSansMath", "FX NotoSansCherokee", "FX NotoSansYi", "FX NotoSansBamum", "FX NotoSerifTibetan", "FX NotoSansSymbols2", "FX NotoMusic", "FX NotoEgyptian", "FX NotoSymbols", "FX NotoSans", "Apple Color Emoji", "Segoe UI Emoji", sans-serif; }
+@font-face { font-family: "FX Emoji"; src: url("/__l5e/assets-v1/f6c6b408-f6e6-4e11-b529-ad95257e5cb0/fx-emoji.ttf") format("truetype"); font-display: swap; }
+.member-name-original { font-family: "FX NotoSansMath", "FX NotoSansCherokee", "FX NotoSansYi", "FX NotoSansBamum", "FX NotoSerifTibetan", "FX NotoSansSymbols2", "FX NotoMusic", "FX NotoEgyptian", "FX NotoSymbols", "FX NotoSans", "Apple Color Emoji", "Segoe UI Emoji", "FX Emoji", sans-serif; }
