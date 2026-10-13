@@ -14,3 +14,4 @@
 - Store readable display names alongside original FX names for accessible card labels; render original names with the member font stylesheet so decorative glyphs retain their identity.
 - Use CDN asset pointers for supplied photos and videos; About uses an inline muted looping video to support mobile autoplay.
 - Preserve the imported portfolio's visual language while FX TEAM content replaces the portfolio sections, so future changes remain stylistically consistent.
+- Vercel deploys use vercel.json, which sets NITRO_PRESET=vercel; Lovable builds ignore it and keep their own target. Why: one repo deploys to both.
